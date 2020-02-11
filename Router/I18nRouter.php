@@ -245,7 +245,7 @@ class I18nRouter extends Router
         // check if the matched route belongs to a different locale on another host
         if (isset($params['_locale'])
                 && isset($this->hostMap[$params['_locale']])
-                && in_array($this->context->getHost(), $this->hostMap)
+                && in_array($this->context->getHost(), $this->hostMap) 
                 && $this->context->getHost() !== $host = $this->hostMap[$params['_locale']]) {
             if (!$this->redirectToHost) {
                 throw new ResourceNotFoundException(sprintf(
